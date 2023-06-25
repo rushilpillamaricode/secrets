@@ -1,5 +1,5 @@
 //jshint esversion:6
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -174,6 +174,6 @@ app.get("/logout",(req,res)=>{
         }
     });
 });
-app.listen(3000,()=>{
-    console.log("server started on port 3000");
+app.listen(process.env.PORT || 3000,()=>{
+    console.log("server started successfully");
 })
